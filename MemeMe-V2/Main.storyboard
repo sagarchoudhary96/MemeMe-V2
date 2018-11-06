@@ -28,11 +28,11 @@
             </objects>
             <point key="canvasLocation" x="-2089" y="-206"/>
         </scene>
-        <!--Item-->
+        <!--List-->
         <scene sceneID="mKn-Wl-mUv">
             <objects>
                 <navigationController id="Vzt-Oc-JGn" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="r78-i7-WcE"/>
+                    <tabBarItem key="tabBarItem" title="List" image="list" selectedImage="list" id="r78-i7-WcE"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="dih-KF-gUR">
                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -45,7 +45,7 @@
             </objects>
             <point key="canvasLocation" x="-1230" y="-622"/>
         </scene>
-        <!--Meme Table View Controller-->
+        <!--Sent Memes-->
         <scene sceneID="05U-7h-kgm">
             <objects>
                 <tableViewController id="HzU-9S-a8e" customClass="MemeTableViewController" customModule="MemeMe_V2" customModuleProvider="target" sceneMemberID="viewController">
@@ -77,7 +77,7 @@
                             <outlet property="delegate" destination="HzU-9S-a8e" id="CG5-Es-2dp"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="pKe-Ju-Nwn">
+                    <navigationItem key="navigationItem" title="Sent Memes" id="pKe-Ju-Nwn">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Mug-AZ-3Sf">
                             <connections>
                                 <segue destination="BYZ-38-t0r" kind="presentation" id="NXi-0C-tpT"/>
@@ -89,11 +89,11 @@
             </objects>
             <point key="canvasLocation" x="-298.39999999999998" y="-622.16748768472905"/>
         </scene>
-        <!--Item-->
+        <!--Grid-->
         <scene sceneID="faw-hu-JeD">
             <objects>
                 <navigationController id="oCd-RN-KIK" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="WGC-0A-Aen"/>
+                    <tabBarItem key="tabBarItem" title="Grid" image="grid" selectedImage="grid" id="WGC-0A-Aen"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Lr2-NK-WDc">
                         <rect key="frame" x="0.0" y="44" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -106,28 +106,42 @@
             </objects>
             <point key="canvasLocation" x="-1231" y="58"/>
         </scene>
-        <!--Meme Collection View Controller-->
+        <!--Sent Memes-->
         <scene sceneID="v6g-i0-B7N">
             <objects>
                 <collectionViewController id="PpY-00-ZoD" customClass="MemeCollectionViewController" customModule="MemeMe_V2" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="3ZG-8Q-tyn">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ZFv-kU-2cN">
-                            <size key="itemSize" width="115" height="107"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.974884463028169" colorSpace="custom" customColorSpace="displayP3"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" sectionInsetReference="safeArea" id="ZFv-kU-2cN">
+                            <size key="itemSize" width="80" height="80"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            <inset key="sectionInset" minX="16" minY="10" maxX="16" maxY="10"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="memeCollectionCell" id="yMo-AQ-EGH">
-                                <rect key="frame" x="0.0" y="0.0" width="115" height="107"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="memeCollectionViewCell" id="yMo-AQ-EGH" customClass="MemeCollectionViewCell" customModule="MemeMe_V2" customModuleProvider="target">
+                                <rect key="frame" x="16" y="10" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                    <rect key="frame" x="0.0" y="0.0" width="115" height="107"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zgs-0C-ZFG">
+                                            <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                        </imageView>
+                                    </subviews>
                                 </view>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="zgs-0C-ZFG" secondAttribute="trailing" id="Acb-B2-Zmb"/>
+                                    <constraint firstItem="zgs-0C-ZFG" firstAttribute="leading" secondItem="yMo-AQ-EGH" secondAttribute="leading" id="Qxb-Ee-ai2"/>
+                                    <constraint firstItem="zgs-0C-ZFG" firstAttribute="top" secondItem="yMo-AQ-EGH" secondAttribute="top" id="a8i-07-vpc"/>
+                                    <constraint firstAttribute="bottom" secondItem="zgs-0C-ZFG" secondAttribute="bottom" id="iNe-6R-RR5"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="memeImageView" destination="zgs-0C-ZFG" id="2t0-ta-f9U"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
@@ -135,7 +149,7 @@
                             <outlet property="delegate" destination="PpY-00-ZoD" id="vVe-xL-weR"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" id="ygF-Cw-GOq">
+                    <navigationItem key="navigationItem" title="Sent Memes" id="ygF-Cw-GOq">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="JBq-d9-RNx">
                             <connections>
                                 <segue destination="BYZ-38-t0r" kind="presentation" id="1Pp-GH-qj1"/>
@@ -277,7 +291,11 @@
             <point key="canvasLocation" x="1637" y="-271"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="grid" width="20" height="20"/>
+        <image name="list" width="20" height="20"/>
+    </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="NXi-0C-tpT"/>
+        <segue reference="1Pp-GH-qj1"/>
     </inferredMetricsTieBreakers>
 </document>

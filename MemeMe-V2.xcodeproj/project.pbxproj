@@ -17,6 +17,7 @@
 		1BA1D40621919696006CE53E /* MemeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA1D40521919695006CE53E /* MemeTableViewController.swift */; };
 		1BA1D408219196AD006CE53E /* MemeCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA1D407219196AD006CE53E /* MemeCollectionViewController.swift */; };
 		1BA1D40A21920AA1006CE53E /* MemeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA1D40921920AA1006CE53E /* MemeViewController.swift */; };
+		1BA1D40C21921381006CE53E /* MemeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA1D40B21921381006CE53E /* MemeCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		1BA1D40521919695006CE53E /* MemeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeTableViewController.swift; sourceTree = "<group>"; };
 		1BA1D407219196AD006CE53E /* MemeCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeCollectionViewController.swift; sourceTree = "<group>"; };
 		1BA1D40921920AA1006CE53E /* MemeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeViewController.swift; sourceTree = "<group>"; };
+		1BA1D40B21921381006CE53E /* MemeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemeCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 				1BA1D40921920AA1006CE53E /* MemeViewController.swift */,
 				1BA1D407219196AD006CE53E /* MemeCollectionViewController.swift */,
 				1BA1D40521919695006CE53E /* MemeTableViewController.swift */,
+				1BA1D40B21921381006CE53E /* MemeCollectionViewCell.swift */,
 				1BA1D3F32190C652006CE53E /* Assets.xcassets */,
 				1BA1D3F52190C652006CE53E /* LaunchScreen.storyboard */,
 				1BA1D3F82190C652006CE53E /* Info.plist */,
@@ -160,6 +163,7 @@
 			files = (
 				1BA1D3EF2190C651006CE53E /* MemeEditorViewController.swift in Sources */,
 				1BA1D4042191938C006CE53E /* Meme.swift in Sources */,
+				1BA1D40C21921381006CE53E /* MemeCollectionViewCell.swift in Sources */,
 				1BA1D3FF2190C702006CE53E /* MemeTextFieldDelegate.swift in Sources */,
 				1BA1D40A21920AA1006CE53E /* MemeViewController.swift in Sources */,
 				1BA1D40621919696006CE53E /* MemeTableViewController.swift in Sources */,

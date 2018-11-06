@@ -131,6 +131,7 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
         dismiss(animated: true, completion: nil)
     }
     
+    // MARK: close MemeEditorModal
     @IBAction func closeMemeModal() {
         self.dismiss(animated: true, completion: nil)
     }
