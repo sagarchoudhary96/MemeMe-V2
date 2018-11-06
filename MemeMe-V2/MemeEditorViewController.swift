@@ -8,15 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
-
-    //MARK: meme object
-    struct memeObject {
-        var topText: String
-        var bottomText: String
-        var originalImage: UIImage
-        var memeImage: UIImage
-    }
+class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     //MARK: Views
     @IBOutlet weak var imageView: UIImageView!
@@ -139,16 +131,19 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         dismiss(animated: true, completion: nil)
     }
     
-    @IBAction func resetMeme(_ sender: Any) {
-        imageView.image = nil
-        topTextField.text = "TOP"
-        bottomTextField.text = "BOTTOM"
-        shareButton.isEnabled = false
+    @IBAction func closeMemeModal() {
+        self.dismiss(animated: true, completion: nil)
     }
     
     func saveMeme(memeImage: UIImage) {
-        _ = memeObject(
+        let meme = Meme(
             topText: topTextField.text!, bottomText: bottomTextField.text!, originalImage: imageView.image!, memeImage: memeImage)
+        
+        // add meme to array
+        (UIApplication.shared.delegate as! AppDelegate).memes.append(meme)
+
+        // navigate to rootview
+       closeMemeModal()
     }
     
     //MARK: show/hide Bars
